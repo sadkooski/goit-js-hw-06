@@ -1,4 +1,3 @@
-const body = document.body;
 const categories = document.querySelectorAll("#categories > li");
 
 console.log(`Number of categories: ${categories.length}`);
