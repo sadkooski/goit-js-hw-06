@@ -6,16 +6,17 @@ const destroy = document.querySelector('[data-destroy]');
 // console.log(destroy)
 const boxes = document.querySelector("#boxes")
 // console.log(boxes)
+let amount = [];
 
-
-let amount = input.addEventListener("input", (event) => {
-  Number(event.currentTarget.value); 
+ input.addEventListener("input", (event) => {
+  amount.push(Number(event.currentTarget.value)); 
   });
+
+  console.log(amount)
 
 function createBoxes(amount) {
  
-  // console.log(amount)
-
+ 
 for (let i = 0; i <= amount - 1; i += 1 ) {
   console.log(document.createElement("div"))
 }
