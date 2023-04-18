@@ -15,8 +15,11 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-for (const image of images) {
-const htmlString = `<li class="image"><img src="${image.url}" alt="${image.alt}"></li>`
-gallery.insertAdjacentHTML("beforeend", htmlString)
-}
+let htmlString = '';
 
+for (const image of images) {
+const htmlStringFragment = `<li class="image"><img src="${image.url}" alt="${image.alt}"></li>`;
+htmlString += htmlStringFragment;}
+
+console.log(htmlString)
+gallery.insertAdjacentHTML("beforeend", htmlString);
