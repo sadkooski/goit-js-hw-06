@@ -9,31 +9,31 @@ const boxes = document.querySelector("#boxes")
 
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
+ return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
 
 
 function createBoxes(amount) {
-amount = Number(this.value);
+    amount = Number(this.value);
     // console.log(amount)
  create.addEventListener('click', () => {
     let totalSize = 20;
-    for (let i = 0; i <= amount - 1; i += 1) { 
+ for (let i = 0; i <= amount - 1; i += 1) { 
     totalSize += 10;
-    let newDiv = document.createElement("div");
+    const newDiv = document.createElement("div");
     newDiv.style.width = totalSize.toString() + "px";
     newDiv.style.height = totalSize.toString() + "px";
     newDiv.style.backgroundColor = getRandomHexColor();
     boxes.append(newDiv);
-   
 }; 
 });
 }
 
+
 function destroyBoxes() {
- boxes.innerHTML = '';   
+    boxes.innerHTML = '';   
 }
 
 input.addEventListener('input', createBoxes);
